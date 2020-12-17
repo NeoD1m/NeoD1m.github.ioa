@@ -3,8 +3,17 @@
 <head>
 <meta charset="UTF-8">
 <title>Информационно-справочный ресурс "Космические летательные аппараты"</title>
-
-<frameset cols="*,*" rows="*,*" frameborder="0" >
+  
+<script>
+	function adaptScreen(){
+	if(window.innerHeight > window.innerWidth){
+		parent.document.getElementById('Edit').rows = "*,*";
+		parent.document.getElementById('Edit').cols = "*,*";
+	} else parent.document.getElementById('Edit').cols = "*,*,*,*";
+	}
+</script>
+  
+<frameset onload="adaptScreen()" id="Edit" frameborder="0" >
 
 <frame src="frames/frame1.html" scrolling="no" noresize>
 <frame src="frames/frame2.html" scrolling="no" noresize>
