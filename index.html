@@ -9,7 +9,10 @@
 	if(window.innerHeight > window.innerWidth){
 		parent.document.getElementById('Edit').rows = "*,*";
 		parent.document.getElementById('Edit').cols = "*,*";
-	} else parent.document.getElementById('Edit').cols = "*,*,*,*";
+	} else {
+		parent.document.getElementById('Edit').rows = "";
+		parent.document.getElementById('Edit').cols = "*,*,*,*";
+	}
 		var t=setInterval(adaptScreen,10);
 	}
 </script>
